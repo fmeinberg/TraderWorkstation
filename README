@@ -1,0 +1,50 @@
+
+
+[Installation]
+
+If you are viewing this README file on GitHub, you can download this package by clicking on the Download button above.
+
+Once you have downloaded the package, there are multiple ways to load it into Mathematica. Some of theem are:
+
+(1) The simplest way to load this package into Mathematica is to use Get[file], where file is the full path of the .m file that comes within this package. However, this will fail if there are dependencies and you haven't loaded the other required packages.
+
+(2) To make a package available to Mathematica on a permnent basis, you should copy the package folder to a location on your $Path. Default values for placing packages are:
+
+ToFileName[$UserBaseDirectory,"Applications"]
+
+ToFileName[$BaseDirectory,"Applications"]
+
+(3) You can also evaluate a statement that adds a directory of your choice to the $Path (such as: AppendTo[$Path, myDirectory] ). If you do that, you will need to run that statement everytime you run Mathematica, or include it in your init.m file.
+
+Once a package's directory has been added to the $Path, you can load a Mathematica package that is located within a directory in your $Path by running
+
+<<PackageName` (same as Get["PackageName`"] )
+
+or
+
+Needs["PackageName`"]
+
+For more details on the different modalities of loading packages into Mathematica, check the documentation.
+
+[Documentation]
+
+Documentation for this package is found in the accompanying .nb file.
+
+This package needs better documentation: both usage messages and documentation pages. If you want to help, please contact me.
+
+[Copyright]
+
+Copyright (C) 2009-2011 by Frederico Meinberg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+(1) The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+(2) Except as contained in this notice, the name(s) of the above copyright holders shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Enjoy.
+
+-- FM
