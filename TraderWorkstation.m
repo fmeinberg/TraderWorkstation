@@ -1,6 +1,6 @@
 BeginPackage["TraderWorkstation`",{"ExpressionManipulation`", "InternetTools`"}];
 
-(*  User paths and constants  -- you need to uncomment  *)
+(*  User paths and constants  -- you need to uncomment and fill out *)
 
 (* <Begin user settings>
 
