@@ -12,7 +12,7 @@ $TWSAPIJarPath=""; (* Path to the jtsclient.jar file *)
 
 $TWSSecuritiesFile = ""; (* Path to the securities text file *);
 
-$TWSPort = 9999; (* TWS incoming port (Integer, not String) *)
+$TWSPort = 9999; (* TWS incoming port (Integer, not String); incoming requests must be ENABLED and CONFIGURED on TWS *)
 
 $IBAccountNumber = ""; (* IB account number "UXXXXXX" *)
 
