@@ -778,9 +778,9 @@ logVectorWindow[] :=
 ibContractSearch[]:= OpenURL[$InteractiveBrokersContractSearchURL]
 
 niceGrid[expr_, opts___] :=
- Text@Grid[expr, opts, ItemSize -> Full,
-   Background -> {None, {{White, Lighter[Lighter[Gray]]}}},
-   Alignment -> {Left}]
+    Text@Grid[expr, opts, ItemSize -> Full,
+	      Background -> {None, {{White, Lighter[Lighter[Gray]]}}},
+	      Alignment -> {Left}]
 
 $InteractiveBrokersURLParameters =
   Fold[StringSplit,
