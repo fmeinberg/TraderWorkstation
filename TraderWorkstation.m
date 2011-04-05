@@ -1,6 +1,37 @@
 BeginPackage["TraderWorkstation`",{"ExpressionManipulation`", "InternetTools`"}];
 
-(*  User paths and constants  -- you need to uncomment and fill out *)
+startTWS
+initializeTWSJava
+twsConnect
+initializeConnection
+twsDisconnect
+connectedQ
+accountReport
+accountList
+accountRules
+accountInformation
+accountGrid
+accountWindow
+portfolioList
+portfolioInformation
+portfolioGrid
+portfolioGridDynamic
+portfolioWindow
+accountSummaryLista
+accountSummaryGrid
+accountSummaryWindow
+reqHist
+marketSnapshot
+shapshotGrid
+snapshotWindow
+logVectorWindow
+ibContractSearch
+interactiveBrokersSearchList
+interactiveBrokersSearchWindow
+
+Begin["Private`"];
+
+(*  User paths and constants  -- you need to uncomment and fill out, or read them from a separate file  *)
 
 (* <Begin user settings>
 
@@ -820,4 +851,5 @@ $TWSSettingsRules = Block[ {r},
                         $TWSSettings //. XMLElement -> (r[#1, {#2, #3}] & ) /. {} -> Null /. r -> Rule
                     ];
 
+End[];
 EndPackage[];
