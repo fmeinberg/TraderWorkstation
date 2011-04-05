@@ -1,33 +1,44 @@
-BeginPackage["TraderWorkstation`",{"ExpressionManipulation`", "InternetTools`"}];
+BeginPackage["TraderWorkstation`",{"ExpressionManipulation`", "InternetTools`","JLink`"}];
 
-startTWS
-initializeTWSJava
-twsConnect
-initializeConnection
-twsDisconnect
-connectedQ
-accountReport
-accountList
-accountRules
-accountInformation
-accountGrid
-accountWindow
-portfolioList
-portfolioInformation
-portfolioGrid
-portfolioGridDynamic
-portfolioWindow
-accountSummaryLista
-accountSummaryGrid
-accountSummaryWindow
-reqHist
-marketSnapshot
-shapshotGrid
-snapshotWindow
-logVectorWindow
-ibContractSearch
-interactiveBrokersSearchList
-interactiveBrokersSearchWindow
+(* Declare settings variables *)
+
+$TWSSettingsFile;
+$TWSSecuritiesDirectory;
+$TWSAPIJarPath;
+$TWSSecuritiesFile;
+$TWSPort;
+$IBAccountNumber;
+
+(* Exported functions *)
+
+startTWS::usage="";
+initializeTWSJava::usage="";
+twsConnect::usage="";
+initializeConnection::usage="";
+twsDisconnect::usage="";
+connectedQ::usage="";
+accountReport::usage="";
+accountList::usage="";
+accountRules::usage="";
+accountInformation::usage="";
+accountGrid::usage="";
+accountWindow::usage="";
+portfolioList::usage="";
+portfolioInformation::usage="";
+portfolioGrid::usage="";
+portfolioGridDynamic::usage="";
+portfolioWindow::usage="";
+accountSummaryList::usage="";
+accountSummaryGrid::usage="";
+accountSummaryWindow::usage="";
+reqHist::usage="";
+marketSnapshot::usage="";
+shapshotGrid::usage="";
+snapshotWindow::usage="";
+logVectorWindow::usage="";
+ibContractSearch::usage="";
+interactiveBrokersSearchList::usage="";
+interactiveBrokersSearchWindow::usage="";
 
 Begin["Private`"];
 
@@ -82,8 +93,8 @@ twsConnect[pars__] :=
 
 initializeConnection[] :=
     Block[ {},
-        twsConnect["", $TWSPort, 1];
-        reqID = 1;
+	   twsConnect["", $TWSPort, 1];
+	   reqID = 1;
     ]
 
 twsDisconnect[] :=
